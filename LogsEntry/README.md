@@ -31,9 +31,9 @@ pip install -r requirements.txt
 # Cómo usar el programa
 
 1. Coloca tu archivo `apache.log` en la misma carpeta que el script.
-2. Asegúrate de que el archivo se llama exactamente:
+2. Asegúrate de que el archivo se llama exactamente: apache.log
 
-3. el apache.log ejecuta el script
+3. ejecuta el script: python logsentry.py
 
 4. El programa leerá el log, lo analizará y mostrará en pantalla:
 
@@ -52,6 +52,12 @@ Para convertir este programa en una herramienta real debes:
 Usar rutas reales como: /var/log/apache2/access.log
 
 
+###  2. Agregar más validaciones  
+Como manejar logs rotados:  
+
+access.log.1
+access.log.2.gz
+
 ###  3. Agregar visualizaciones gráficas  
 Gráficas de tráfico diario, errores, IPs sospechosas, etc.
 
@@ -64,8 +70,8 @@ Enviar resultados a:
 
 ###  5. Ejecutarlo automáticamente  
 Con cron jobs:
-
-
+crontab -e
+0 * * * * python analizador.py
 
 
 
